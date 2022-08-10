@@ -14,22 +14,6 @@
   background-color: 020202;
   z-index: 1
 }
-.searchBox{
-  min-height: 30vh;
-  padding: 4rem 0;
-  position: absolute;
-  flex: 1;
-  display: flex;
-  flex-flow: row nowarp;
-  justify-content: space-between;
-  align-items: center;
-  background-color: black;
-  color:white;
-  top: 6rem;
-  left:0;
-  right:0;
-  z-index:10;
-}
 .mainitems{
   min-height: 100vh;
   padding: 4rem 0;
@@ -40,12 +24,6 @@
   align-items: center;
   background-color: 020202;
   z-index: 1;
-}
-.show{
-  display: block;
-}
-.hide{
-  display: none;
 }
 .footer {
   display: flex;

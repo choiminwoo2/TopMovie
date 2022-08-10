@@ -1,0 +1,29 @@
+.search-bar{
+    justify-self: flex-end;
+    padding-right: 2rem;
+    position: relative;
+}
+
+.searchBox{
+    min-height: 30vh;
+    padding: 4rem 0;
+    position: absolute;
+    flex: 1;
+    display: flex;
+    flex-flow: row nowarp;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color:white;
+    top: 60px;
+    left:0;
+    right:0;
+    z-index:10;
+  }
+
+  .show{
+    display: block;
+  }
+  .hide{
+    display: none;
+  }

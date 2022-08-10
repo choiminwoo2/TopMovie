@@ -18,11 +18,6 @@ type ApiResponseData = {
 };
 const Home: NextPage = () => {
   const [officeBoxItems, setOfficeBoxItems] = useState<ApiResponseData[]>([]);
-  const [isSearch, setIsSearch] = useState(false);
-  const clickSearchBar = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsSearch((current) => !current);
-  };
   useEffect(() => {
     const url = `https://imdb-api.com/en/API/BoxOffice/${process.env.MOVIE_API_KEY}`;
     const response = async () => {
@@ -43,12 +38,6 @@ const Home: NextPage = () => {
         ))}
       </div>
       <div className={styles.main}>
-        <div onClick={clickSearchBar}>searchBar</div>
-        {isSearch ? (
-          <div className={`${styles.searchBox} ${styles.show}`}>maybe</div>
-        ) : (
-          <div className={`${styles.searchBox} ${styles.hide}`}>goods</div>
-        )}
 
         <div className={styles.mainitems}>main</div>
       </div>
