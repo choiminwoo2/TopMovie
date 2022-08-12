@@ -1,4 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
+
+export const MOVIE_BASE_URL= 'https://imdb-api.com/en/API';
+
 export type ApiResponseData = {
     gross: string;
     id: string;
@@ -12,7 +15,7 @@ export type ApiResponseData = {
 const Movies = () =>{
     const [officeBoxItems, setOfficeBoxItems] = useState<ApiResponseData[]>([]);
     useEffect(() => {
-      const url = `https://imdb-api.com/en/API/BoxOffice/${process.env.MOVIE_API_KEY}`;
+      const url = `${MOVIE_BASE_URL}/BoxOffice/${process.env.MOVIE_API_KEY}`;
       const response = async () => {
         const response = await fetch(url).then((response) => response);
         if (!response.ok) {
@@ -28,7 +31,6 @@ const Movies = () =>{
         {officeBoxItems.map((item) => (
             <li key={item.id}>{item.title}</li>
           ))}
-        </div>
         </Fragment>
     )
 }
